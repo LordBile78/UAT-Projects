@@ -1,0 +1,50 @@
+# UAT-Projects
+UAT class projects
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+p {
+color: rgb(0, 0, 0);
+font-size: x-large;
+font-weight: bold;
+font-family:'Times New Roman', Times, serif;
+}
+</style>
+<script type= "text/javascript">
+var countDown;
+
+function countDownClock() {
+  var timeLeft = 10;
+  var text = document.getElementById("countDownTimer");
+  countDown = setInterval(function() {
+    if (timeLeft == 0) {
+      clearInterval(countDown);
+      text.innerHTML = "Blastoff";
+    } else {
+      text.innerHTML = timeLeft;
+    }
+    timeLeft -= 1;
+  }, 1000);
+}
+</script>
+<!-- Comment// I delete the code from last week dealing with the one countdown from 10 per click and replaced it with a code I found on Stackoverflow.com.
+   I had to change to starting number in the new code for this count down to start at 10 vs. 5. Then i had to change the buttons from a PLAY and
+   STOP SYMBOLS to text buttons that read START and STOP. -->
+
+<title>Document</title> 
+</head>
+<body>
+    <img src= "C:\Users\Bill's\Blast Off Project\UATspaceLogo-1.jpg"  style="width:100px;height: 100px;">
+    <h1>     UAT Space Program    </h1>
+ <h3>     Test of the document write function     </h3>
+    <h3>     Test of the paragraph tags     </h3>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+     <div id="countDownTimer"></div>
+    <button onclick="countDownClock()" >Start</button>
+    <button onclick="clearInterval(countDown)" >Stop</button>
+    <p id="countdownlabel" ></p>
+<p id="blastoffLabel" ></p>
+</body>
+</html>
