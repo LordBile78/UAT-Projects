@@ -1,0 +1,62 @@
+# UAT-Projects
+UAT class projects
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title> 10 second countdown</title>
+
+   <style>
+       @font-face{
+           font-family: sevenSegment;
+           src: url(seven-segment.ttf);
+ }
+ h1{
+     font-family: sevenSegment;
+     font-size: 10em;
+ }
+
+ .container{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+    </style>
+</head>
+<body>
+    <audio controls>
+        <source src="C:\Users\Bill's\Blast Off Project\us-lab-background.mp3" type="audio/mpeg">
+       </audio>
+        
+</body>
+<body>
+    <div class="container">
+        <h1 id="count">10</h1>
+    </div>
+
+    <script type="text/javascript">
+        var counter = 10;
+        
+
+        setInterval(function(){
+            counter--;
+
+            if( counter >= 0){
+            id = document.getElementById("count");
+            id.innerHTML = counter;
+        }
+
+        if( counter === 5){
+            id.innerHTML = "Warning Less than ½ way to launch, time left"
+        }
+         
+            
+        if( counter === 0){
+            id.innerHTML = "Blastoff"
+        }
+        }, 1000);
+
+    </script>
+  
+</body>
+</html>
